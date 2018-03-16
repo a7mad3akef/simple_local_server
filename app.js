@@ -23,6 +23,12 @@ app.get('/set', function(req, res){
     res.json({Brightness:intense});
 });
 
+app.post('/set', function(req, res){
+    console.log(req.body)
+    intense = parseInt(req.body.val)
+    res.json({Brightness:intense});
+});
+
 app.listen(4000, function () {
 	console.log('app running on port 4000')
 })
